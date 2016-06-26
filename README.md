@@ -3,7 +3,7 @@
 [x3dom](http://www.x3dom.org/) version of [d3-shape](https://github.com/d3/d3-shape). Create 3d primitive shapes in x3dom such as lines and surfaces.
 
 
-[![Build Status](https://travis-ci.org/fabid/d3-x3dom-shapes.svg?branch=master)](https://travis-ci.org/fabid/d3-x3dom-shapes)
+[![Build Status](https://travis-ci.org/fabid/d3-x3dom-shape.svg?branch=master)](https://travis-ci.org/fabid/d3-x3dom-shape)
 
 ## Installing
 
