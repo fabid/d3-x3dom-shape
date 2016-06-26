@@ -25,11 +25,11 @@
   },
   "devDependencies": {
     "d3-scale": "^1.0.0",
+    "eslint": "^2.13.1",
     "faucet": "0.0",
     "rollup": "0.25",
     "tape": "4",
     "uglify-js": "2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
