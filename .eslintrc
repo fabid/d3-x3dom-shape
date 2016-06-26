@@ -1,0 +1,16 @@
+parserOptions:
+    sourceType: "module"
+
+env:
+    es6: true
+    browser: true
+
+extends:
+    "eslint:recommended"
+
+rules:
+    no-cond-assign: 0
+    comma-dangle: ["error", "always-multiline"]
+
+globals:
+    require: true

@@ -1,0 +1,35 @@
+{
+  "name": "d3-x3dom-shape",
+  "version": "0.0.1",
+  "description": "Graphical primitives for x3dom based visualization, such as lines and surfaces.",
+  "keywords": [
+    "d3",
+    "d3-module",
+    "x3dom",
+    "webgl",
+    "graphics",
+    "visualization"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/d3-x3dom-shape.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/fabid/d3-x3dom-shape",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabid/d3-x3dom-shape.git"
+  },
+  "scripts": {
+    "pretest": "mkdir -p build && node -e 'process.stdout.write(\"var version = \\\"\" + require(\"./package.json\").version + \"\\\"; export * from \\\"../index\\\"; export {version};\");' > build/package.js && rollup -g d3-scale:d3_scale,d3-selection:d3_selection -f umd -n d3_x3dom_shape -o build/d3-x3dom-shape.js -- index.js",
+    "test": "tape 'test/**/*-test.js' |faucet && eslint index.js src",
+    "prepublish": "npm run test && uglifyjs build/d3-x3dom-shape.js -c -m -o build/d3-x3dom-shape.min.js && rm -f build/d3-x3dom-shape.zip && zip -j build/d3-x3dom-shape.zip -- LICENSE README.md build/d3-x3dom-shape.js build/d3-x3dom-shape.min.js"
+  },
+  "devDependencies": {
+    "d3-scale": "^1.0.0",
+    "faucet": "0.0",
+    "rollup": "0.25",
+    "tape": "4",
+    "uglify-js": "2"
+  },
+  "dependencies": {
+  }
+}
